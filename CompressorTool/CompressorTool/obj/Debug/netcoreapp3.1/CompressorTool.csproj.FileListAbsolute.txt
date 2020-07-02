@@ -1,0 +1,11 @@
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\bin\Debug\netcoreapp3.1\CompressorTool.exe
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\bin\Debug\netcoreapp3.1\CompressorTool.deps.json
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\bin\Debug\netcoreapp3.1\CompressorTool.runtimeconfig.json
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\bin\Debug\netcoreapp3.1\CompressorTool.runtimeconfig.dev.json
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\bin\Debug\netcoreapp3.1\CompressorTool.dll
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\bin\Debug\netcoreapp3.1\CompressorTool.pdb
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\obj\Debug\netcoreapp3.1\CompressorTool.csprojAssemblyReference.cache
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\obj\Debug\netcoreapp3.1\CompressorTool.AssemblyInfoInputs.cache
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\obj\Debug\netcoreapp3.1\CompressorTool.AssemblyInfo.cs
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\obj\Debug\netcoreapp3.1\CompressorTool.dll
+C:\Users\REHMANALI\source\repos\CompressorTool\CompressorTool\obj\Debug\netcoreapp3.1\CompressorTool.pdb
