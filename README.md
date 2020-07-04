@@ -14,3 +14,6 @@ For an example, consider some strings “YYYZXXYYX”, the frequency of characte
 ### Time Complexity
 
 Complexity for assigning the code for each character according to their frequency is **O(n log n)
+
+## Greedy Explanation
+Huffman coding looks at the occurrence of each character and stores it as a binary string in an optimal way. The idea is to assign variable-length codes to input input characters, length of the assigned codes are based on the frequencies of corresponding characters. We create a binary tree and operate on it in bottom-up manner so that the least two frequent characters are as far as possible from the root. In this way, the most frequent character gets the smallest code and the least frequent character gets the largest code.
