@@ -21,6 +21,7 @@ while Q.size() is not equal to 1
     Z.frequency = x.frequency + y.frequency       
     Q.push(Z)     
 Return Q      
+</pre>
 
 ## Decompression Technique
 The process of decompression is simply a matter of translating the stream of prefix codes to individual byte value, usually by traversing the Huffman
