@@ -7,18 +7,19 @@ a link to its child nodes. As a convention, bit '0' represents left child and bi
 nodes, which provides the node with lowest frequency when popped.
 
 ## Pseudocode
+
 Huffman_Compression(C):     // C is the set of n characters and related information     
 n = C.size      
 Q = priority_queue()     
 for i = 1 to n    
-    n = node(C[i])    
-    Q.push(n)     
+&nbsp; &nbsp; &nbsp; n = node(C[i])    
+&nbsp; &nbsp; &nbsp; Q.push(n)     
 while Q.size() is not equal to 1     
-    Z = new node()            
-    Z.left = x = Q.pop()            
-    Z.right = y = Q.pop()               
-    Z.frequency = x.frequency + y.frequency       
-    Q.push(Z)     
+&nbsp; &nbsp; &nbsp; Z = new node()            
+&nbsp; &nbsp; &nbsp; Z.left = x = Q.pop()            
+&nbsp; &nbsp; &nbsp; Z.right = y = Q.pop()               
+&nbsp; &nbsp; &nbsp; Z.frequency = x.frequency + y.frequency       
+&nbsp; &nbsp; &nbsp; Q.push(Z)     
 Return Q      
 
 ## Decompression Technique
@@ -28,6 +29,7 @@ The leaf value represents the desired character. Usually the Huffman Tree is con
 cycle, thus the reconstruction is fairly simple. Otherwise, the information to reconstruct the tree must be sent separately.
 
 ## Pseudocode
+<pre>
 Huffman_Decompression(root, S):            // root represents the root of Huffman Tree     
 n = S.length                              // S refers to bit-stream to be decompressed      
 for i = 1 to n   
@@ -38,5 +40,6 @@ for i = 1 to n
         else   
             current = current.right    
         i = i+1      
-    print current.symbol      
-      
+    print current.symbol     
+           
+</pre>
