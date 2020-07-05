@@ -6,6 +6,9 @@ To reduce the time needed for files to be transmitted over a network, Compressio
 ## Huffman Coding Algorithm
 
 Huffman coding is a lossless data compression algorithm. In this algorithm, a variable-length code is assigned to input different characters. The code length is related to how frequently characters are used. Most frequent characters have the smallest codes and longer codes for least frequent characters.
+There are mainly two major parts in Huffman Coding
+1) Build a Huffman Tree from input characters.
+2) Traverse the Huffman Tree and assign codes to characters.
 
 ### Example
 
