@@ -7,7 +7,6 @@ To reduce the time needed for files to be transmitted over a network, Compressio
 
 Huffman coding is a lossless data compression algorithm. In this algorithm, a variable-length code is assigned to input different characters. The code length is related to how frequently characters are used. Most frequent characters have the smallest codes and longer codes for least frequent characters.
 
-There are mainly **two** parts. First one to create a Huffman tree, and another one to traverse the tree to find codes.
 ### Example
 
 For an example, consider some strings “YYYZXXYYX”, the frequency of character Y is larger than X and the character Z has the least frequency. So the length of the code for Y is smaller than X, and code for X will be smaller than Z.
