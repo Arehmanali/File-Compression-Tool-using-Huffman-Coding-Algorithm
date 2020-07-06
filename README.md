@@ -15,6 +15,7 @@ Huffman Coding prevents any ambiguity in the decoding process using the concept 
 ### Example
 
 For an example, consider some strings “YYYZXXYYX”, the frequency of character Y is larger than X and the character Z has the least frequency. So the length of the code for Y is smaller than X, and code for X will be smaller than Z.
+
 ### Time Complexity
 
 Complexity for assigning the code for each character according to their frequency is **O(n log n)
