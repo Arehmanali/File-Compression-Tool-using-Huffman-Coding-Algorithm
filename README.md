@@ -10,6 +10,8 @@ There are mainly two major parts in Huffman Coding
 1) Build a Huffman Tree from input characters.
 2) Traverse the Huffman Tree and assign codes to characters.
 
+Huffman Coding prevents any ambiguity in the decoding process using the concept of prefix code ie. a code associated with a character should not be present in the prefix of any other code.
+
 ### Example
 
 For an example, consider some strings “YYYZXXYYX”, the frequency of character Y is larger than X and the character Z has the least frequency. So the length of the code for Y is smaller than X, and code for X will be smaller than Z.
