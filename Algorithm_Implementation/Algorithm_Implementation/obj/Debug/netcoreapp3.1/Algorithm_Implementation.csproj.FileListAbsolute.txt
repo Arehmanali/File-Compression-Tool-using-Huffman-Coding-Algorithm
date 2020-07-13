@@ -1,0 +1,12 @@
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\bin\Debug\netcoreapp3.1\Algorithm_Implementation.exe
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\bin\Debug\netcoreapp3.1\Algorithm_Implementation.deps.json
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\bin\Debug\netcoreapp3.1\Algorithm_Implementation.runtimeconfig.json
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\bin\Debug\netcoreapp3.1\Algorithm_Implementation.runtimeconfig.dev.json
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\bin\Debug\netcoreapp3.1\Algorithm_Implementation.dll
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\bin\Debug\netcoreapp3.1\Algorithm_Implementation.pdb
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\obj\Debug\netcoreapp3.1\Algorithm_Implementation.AssemblyInfoInputs.cache
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\obj\Debug\netcoreapp3.1\Algorithm_Implementation.AssemblyInfo.cs
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\obj\Debug\netcoreapp3.1\Algorithm_Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\obj\Debug\netcoreapp3.1\Algorithm_Implementation.dll
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\obj\Debug\netcoreapp3.1\Algorithm_Implementation.pdb
+C:\Users\Rehman Ali\source\repos\Algorithm_Implementation\Algorithm_Implementation\obj\Debug\netcoreapp3.1\Algorithm_Implementation.genruntimeconfig.cache
