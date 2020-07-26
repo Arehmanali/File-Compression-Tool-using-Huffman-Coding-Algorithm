@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,97 +8,103 @@ namespace Algorithm_Implementation
 {
     public class HuffmanTree
     {
-        private List<Node> nodes = new List<Node>();
-        public Node Root { get; set; }
-        public Dictionary<char, int> Frequencies = new Dictionary<char, int>();
+        private List<Node> node = new List<Node>();
+        public Node rootNode { get; set; }
+        public Dictionary<char, int> frequency = new Dictionary<char, int>();
 
-        public void Build(string source)
+
+        // build the huffman tree of the input file
+        public void Build_Tree(string input)
         {
-            for (int i = 0; i < source.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (!Frequencies.ContainsKey(source[i]))
+                // check the tree contains character or not
+                if (!frequency.ContainsKey(input[i]))
                 {
-                    Frequencies.Add(source[i], 0);
+                    // add the character in tree
+                    frequency.Add(input[i], 0);             
                 }
 
-                Frequencies[source[i]]++;
+                frequency[input[i]]++;
             }
 
-            foreach (KeyValuePair<char, int> symbol in Frequencies)
+            foreach (KeyValuePair<char, int> symbol in frequency)
             {
-                nodes.Add(new Node() { Symbol = symbol.Key, Frequency = symbol.Value });
+                node.Add(new Node() { character = symbol.Key, frequency = symbol.Value });
             }
 
-            while (nodes.Count > 1)
+            while (node.Count > 1)
             {
-                List<Node> orderedNodes = nodes.OrderBy(node => node.Frequency).ToList<Node>();
+                // ordering the nodes on the basis of frequency
+                List<Node> orderedNodes = node.OrderBy(node => node.frequency).ToList<Node>();
 
                 if (orderedNodes.Count >= 2)
                 {
                     // Take first two items
-                    List<Node> taken = orderedNodes.Take(2).ToList<Node>();
+                    List<Node> takenNode = orderedNodes.Take(2).ToList<Node>();
 
                     // Create a parent node by combining the frequencies
                     Node parent = new Node()
                     {
-                        Symbol = '*',
-                        Frequency = taken[0].Frequency + taken[1].Frequency,
-                        Left = taken[0],
-                        Right = taken[1]
+                        character = '*',
+                        frequency = takenNode[0].frequency + takenNode[1].frequency,
+                        leftNode = takenNode[0],
+                        rightNode = takenNode[1]
                     };
 
-                    nodes.Remove(taken[0]);
-                    nodes.Remove(taken[1]);
-                    nodes.Add(parent);
+                    node.Remove(takenNode[0]);
+                    node.Remove(takenNode[1]);
+                    node.Add(parent);
                 }
 
-                this.Root = nodes.FirstOrDefault();
+                this.rootNode = node.FirstOrDefault();
 
             }
 
         }
 
-        public BitArray Encode(string source)
+        // Encode function for encoding the characters in binary form
+        public BitArray Encode(string input)
         {
-            List<bool> encodedSource = new List<bool>();
+            List<bool> encodedInput = new List<bool>();
 
-            for (int i = 0; i < source.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                List<bool> encodedSymbol = this.Root.Traverse(source[i], new List<bool>());
-                encodedSource.AddRange(encodedSymbol);
+                List<bool> encodedCharacter = this.rootNode.Traverse_Tree(input[i], new List<bool>());
+                encodedInput.AddRange(encodedCharacter);
             }
 
-            BitArray bits = new BitArray(encodedSource.ToArray());
+            BitArray BitArray = new BitArray(encodedInput.ToArray());
 
-            return bits;
+            return BitArray;
         }
 
-        public string Decode(BitArray bits)
+        public string Decode(BitArray BitArray)
         {
-            Node current = this.Root;
+            Node currentNode = this.rootNode;
             string decoded = "";
 
-            foreach (bool bit in bits)
+            foreach (bool bit in BitArray)
             {
                 if (bit)
                 {
-                    if (current.Right != null)
+                    if (currentNode.rightNode != null)
                     {
-                        current = current.Right;
+                        currentNode = currentNode.rightNode;
                     }
                 }
                 else
                 {
-                    if (current.Left != null)
+                    if (currentNode.leftNode != null)
                     {
-                        current = current.Left;
+                        currentNode = currentNode.leftNode;
                     }
                 }
 
-                if (IsLeaf(current))
+                if (IsLeaf(currentNode))
                 {
-                    decoded += current.Symbol;
-                    current = this.Root;
+                    decoded += currentNode.character;
+                    currentNode = this.rootNode;
                 }
             }
 
@@ -107,8 +113,9 @@ namespace Algorithm_Implementation
 
         public bool IsLeaf(Node node)
         {
-            return (node.Left == null && node.Right == null);
+ 
+            return (node.leftNode == null && node.rightNode == null);
+       
         }
-
     }
 }
