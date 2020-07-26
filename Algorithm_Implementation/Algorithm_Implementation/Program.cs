@@ -1,10 +1,10 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections;
-using Microsoft.Office.Interop.Word;
+    using System;
+    using System.IO;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Collections;
+    using Microsoft.Office.Interop.Word;
 
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
@@ -25,7 +25,7 @@ namespace Algorithm_Implementation
             static void Main(string[] args)
             {
 
-            /* Read the text file in string variable
+            Read the text file in string variable
             string inputFile = File.ReadAllText(textFile);
 
             HuffmanTree huffmanTree = new HuffmanTree();
@@ -57,10 +57,10 @@ namespace Algorithm_Implementation
 
             // write the decoded file in txt file
             File.WriteAllText(decompressedFile, decoded);
-            Console.WriteLine("File Decoded Successfuly\n");*/
+            Console.WriteLine("File Decoded Successfuly\n");
 
-            string wordString = GetTextFromWord();
-            Console.WriteLine(wordString);
+            string pdfString = GetTextFromPdfFile();
+            Console.WriteLine(pdfString);
             Console.ReadLine();
                
             }
@@ -79,7 +79,7 @@ namespace Algorithm_Implementation
 
             return text.ToString();
         }
-
+        /*
         static public string GetTextFromWord()
         {
             StringBuilder text = new StringBuilder();
