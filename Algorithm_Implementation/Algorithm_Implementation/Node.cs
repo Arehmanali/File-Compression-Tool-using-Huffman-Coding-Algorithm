@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,17 +6,17 @@ namespace Algorithm_Implementation
 {
     public class Node
     {
-        public char Symbol { get; set; }
-        public int Frequency { get; set; }
-        public Node Right { get; set; }
-        public Node Left { get; set; }
+        public char character { get; set; }
+        public int frequency { get; set; }
+        public Node rightNode { get; set; }
+        public Node leftNode { get; set; }
 
-        public List<bool> Traverse(char symbol, List<bool> data)
+        public List<bool> Traverse_Tree(char symbol, List<bool> data)
         {
             // Leaf
-            if (Right == null && Left == null)
+            if (rightNode == null && leftNode == null)
             {
-                if (symbol.Equals(this.Symbol))
+                if (symbol.Equals(this.character))
                 {
                     return data;
                 }
@@ -30,21 +30,21 @@ namespace Algorithm_Implementation
                 List<bool> left = null;
                 List<bool> right = null;
 
-                if (Left != null)
+                if (leftNode != null)
                 {
                     List<bool> leftPath = new List<bool>();
                     leftPath.AddRange(data);
                     leftPath.Add(false);
 
-                    left = Left.Traverse(symbol, leftPath);
+                    left = leftNode.Traverse_Tree(symbol, leftPath);
                 }
 
-                if (Right != null)
+                if (rightNode != null)
                 {
                     List<bool> rightPath = new List<bool>();
                     rightPath.AddRange(data);
                     rightPath.Add(true);
-                    right = Right.Traverse(symbol, rightPath);
+                    right = rightNode.Traverse_Tree(symbol, rightPath);
                 }
 
                 if (left != null)
