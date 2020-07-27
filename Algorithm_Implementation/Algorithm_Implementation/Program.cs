@@ -5,9 +5,9 @@
     using System.Text;
     using System.Collections;
     using Microsoft.Office.Interop.Word;
-
-using iTextSharp.text.pdf;
-using iTextSharp.text.pdf.parser;
+    using iTextSharp.text;
+    using iTextSharp.text.pdf;
+    using iTextSharp.text.pdf.parser;
 
 namespace Algorithm_Implementation
     {
@@ -25,12 +25,22 @@ namespace Algorithm_Implementation
             static void Main(string[] args)
             {
 
-            Read the text file in string variable
+            CompressTextFile();
+            CompressPdfFile();
+            
+            //string wordString = GetTextFromWord();
+            //Console.WriteLine(wordString);
+            //Console.ReadLine();
+        }
+
+        static public void CompressTextFile()
+        {
+            //Read the text file in string variable
             string inputFile = File.ReadAllText(textFile);
 
             HuffmanTree huffmanTree = new HuffmanTree();
 
-            Console.WriteLine("File read Successfully\n");
+            Console.WriteLine("Text File Read Successfully\n");
 
             // Build the Huffman tree
             huffmanTree.Build_Tree(inputFile);
@@ -44,7 +54,7 @@ namespace Algorithm_Implementation
 
             // write all the bits from byte array in bin file
             File.WriteAllBytes(BinaryFile, bytes);
-            Console.Write("File encoded successfully\n");
+            Console.Write("Text File Encoded Successfully\n");
             Console.WriteLine();
 
             // Decode the bin file and write in txt file
@@ -57,14 +67,49 @@ namespace Algorithm_Implementation
 
             // write the decoded file in txt file
             File.WriteAllText(decompressedFile, decoded);
-            Console.WriteLine("File Decoded Successfuly\n");
-
+            Console.WriteLine("Text File Decoded Successfuly\n");
+        }
+        static public void CompressPdfFile()
+        {
             string pdfString = GetTextFromPdfFile();
-            Console.WriteLine(pdfString);
-            Console.ReadLine();
-               
-            }
+   
+            HuffmanTree huffmanTree = new HuffmanTree();
 
+            Console.WriteLine("Pdf File read Successfully\n");
+
+            // Build the Huffman tree
+            huffmanTree.Build_Tree(pdfString);
+
+            // Encode the input file in BitArray in binary form
+            BitArray bit_array = huffmanTree.Encode(pdfString);
+
+            // Byte array for storing the bits from BitArray to save in bin file
+            byte[] bytes = new byte[bit_array.Length / 8 + (bit_array.Length % 8 == 0 ? 0 : 1)];
+            bit_array.CopyTo(bytes, 0);
+
+            // write all the bits from byte array in bin file
+            File.WriteAllBytes(BinaryFile, bytes);
+            
+            Console.Write("Pdf File Encoded successfully\n");
+
+            // Decode the bin file and write in pdf file
+            // read all the bytes from binary file
+            byte[] bytes2 = File.ReadAllBytes(BinaryFile);
+            var bitarray = new BitArray(bytes2);
+
+            // decode the huffman tree
+            string decoded = huffmanTree.Decode(bitarray);
+
+            // write the decoded file in pdf file
+            iTextSharp.text.Document oDoc = new iTextSharp.text.Document();
+            PdfWriter.GetInstance(oDoc, new FileStream("C:/Users/Rehman Ali/Desktop/abcd.pdf", FileMode.Create));
+            oDoc.Open();
+            oDoc.Add(new iTextSharp.text.Paragraph(decoded));
+            oDoc.Close();
+
+            Console.WriteLine("Pdf File Decoded Successfuly\n");
+
+        }
 
         static public string GetTextFromPdfFile()
         {
@@ -79,7 +124,7 @@ namespace Algorithm_Implementation
 
             return text.ToString();
         }
-        /*
+
         static public string GetTextFromWord()
         {
             StringBuilder text = new StringBuilder();
@@ -93,7 +138,6 @@ namespace Algorithm_Implementation
             {
                 text.Append(" \r\n " + docs.Paragraphs[i + 1].Range.Text.ToString());
             }
-
             return text.ToString();
         }
 
