@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "ekuEL8jkZtXqDSLIJoxOp5Yhg2tHt0Hmwwd1G7+AEB++VzHcRDY0rz5r6gnh6iod5c9aDB3J/OAp8Nzu92DQ/A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rehman Ali\\source\\repos\\FileCompressionTool\\FileCompressionTool\\FileCompressionTool.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rehman Ali\\.nuget\\packages\\gembox.document\\31.0.1239\\gembox.document.31.0.1239.nupkg.sha512",
+    "C:\\Users\\Rehman Ali\\.nuget\\packages\\itextsharp\\5.5.13.1\\itextsharp.5.5.13.1.nupkg.sha512",
+    "C:\\Users\\Rehman Ali\\.nuget\\packages\\microsoft.office.interop.word\\15.0.4797.1003\\microsoft.office.interop.word.15.0.4797.1003.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iTextSharp 5.5.13.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Office.Interop.Word 15.0.4797.1003' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Office.Interop.Word",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

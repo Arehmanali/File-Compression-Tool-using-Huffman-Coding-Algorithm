@@ -33,6 +33,8 @@ namespace Algorithm_Implementation
                 node.Add(new Node() { character = symbol.Key, frequency = symbol.Value });
             }
 
+
+
             while (node.Count > 1)
             {
                 // ordering the nodes on the basis of frequency
@@ -71,7 +73,7 @@ namespace Algorithm_Implementation
             for (int i = 0; i < input.Length; i++)
             {
                 List<bool> encodedCharacter = this.rootNode.Traverse_Tree(input[i], new List<bool>());
-                encodedInput.AddRange(encodedCharacter);
+                encodedInput.AddRange (encodedCharacter);
             }
 
             BitArray BitArray = new BitArray(encodedInput.ToArray());
