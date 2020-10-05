@@ -22,7 +22,7 @@ namespace FileCompressionTool
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string filePath = openFileDialog2.FileName;
+            string filePath = openFileDialog2.FileName;         // save the path of file from open dialogue box into string variable
             string binPath = filePath;
             string codingSchemePath = filePath;
 
