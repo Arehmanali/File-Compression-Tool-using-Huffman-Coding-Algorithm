@@ -45,6 +45,7 @@ namespace FileCompressionTool
             string extension = Path.GetExtension(filePath);
             if (extension == ".docx")
             {
+                // call the function CompressDocxFile for compressing the .docx file using given .bn file
                 Program.CompressDocxFile(filePath, binPath,codingSchemePath);
 
             }
