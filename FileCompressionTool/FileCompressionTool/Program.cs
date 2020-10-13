@@ -18,7 +18,7 @@ namespace Algorithm_Implementation
 {
     class Program
     {
-        static public HuffmanTree huffmanTree = new HuffmanTree();
+        static public HuffmanTree huffmanTree = new HuffmanTree();          // huffman tree class object
         static string message = "";
 
         [STAThread]
