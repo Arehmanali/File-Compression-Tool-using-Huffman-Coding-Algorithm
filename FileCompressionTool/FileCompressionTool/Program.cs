@@ -181,6 +181,7 @@ namespace Algorithm_Implementation
             return text.ToString();
         }
 
+        // function for geting the text from the word file
         static public string GetTextFromWordFile(string filePath)
         {
             ComponentInfo.SetLicense("AKSJUY-9IUEY-2YUW7-HSGDT-6NHJY");
