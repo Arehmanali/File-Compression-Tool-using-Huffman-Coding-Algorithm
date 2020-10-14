@@ -31,6 +31,7 @@ namespace Algorithm_Implementation
             CompressPdfFile();
             }
 
+            // function for compressing the .txt extension file
         static public void CompressTextFile()
         {
             //Read the text file in string variable
