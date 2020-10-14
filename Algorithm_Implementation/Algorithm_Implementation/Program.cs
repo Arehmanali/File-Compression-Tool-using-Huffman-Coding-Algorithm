@@ -110,6 +110,7 @@ namespace Algorithm_Implementation
 
         }
 
+            // function for getting the text from pdf file 
         static public string GetTextFromPdfFile()
         {
             StringBuilder text = new StringBuilder();
