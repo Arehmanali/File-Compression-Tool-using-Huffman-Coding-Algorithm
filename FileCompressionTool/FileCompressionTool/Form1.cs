@@ -42,7 +42,8 @@ namespace FileCompressionTool
             binPath = binPath + ".bin";
             textBox1.Text = filePath;
             textBox2.Text = binPath;
-
+            
+            // Get the extension of input file
             string extension = Path.GetExtension(filePath);
             if (extension == ".docx")
             {
