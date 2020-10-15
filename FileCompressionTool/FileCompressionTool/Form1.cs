@@ -25,7 +25,8 @@ namespace FileCompressionTool
             string filePath = openFileDialog2.FileName;         // save the path of file from open dialogue box into string variable
             string binPath = filePath;
             string codingSchemePath = filePath;
-
+            
+            // Remove the existing extension of input file and change into .bin
             int index = codingSchemePath.IndexOf(".");
             if (index > 0)
             {
