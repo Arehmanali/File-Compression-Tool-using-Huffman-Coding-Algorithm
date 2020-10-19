@@ -105,7 +105,7 @@ namespace FileCompressionTool
                 string binPath = filePath;
                 string ExtractPath = filePath;
                 
-                // remove the extension of file and add new extension
+                // remove the extension of file and add new extension _extracted.txt
                 int index = ExtractPath.IndexOf(".");
                 if (index > 0)
                 {
