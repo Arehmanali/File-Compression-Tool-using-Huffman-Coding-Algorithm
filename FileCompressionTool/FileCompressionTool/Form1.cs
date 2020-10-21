@@ -53,6 +53,7 @@ namespace FileCompressionTool
             }
             else if (extension == ".txt")
             {
+                // Call the function to compress the text file
                 Program.CompressTextFile(filePath, binPath,codingSchemePath);
             }
             else if (extension == ".pdf")
