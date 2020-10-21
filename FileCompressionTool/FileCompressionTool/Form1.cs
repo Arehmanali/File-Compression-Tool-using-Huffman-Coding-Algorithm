@@ -58,6 +58,7 @@ namespace FileCompressionTool
             }
             else if (extension == ".pdf")
             {
+                // Call the function to compress the pdf file
                 Program.CompressPdfFile(filePath, binPath,codingSchemePath);
             }
         }
