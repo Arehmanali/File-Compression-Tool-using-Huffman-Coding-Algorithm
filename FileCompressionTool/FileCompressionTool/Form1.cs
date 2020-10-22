@@ -26,7 +26,7 @@ namespace FileCompressionTool
             string binPath = filePath; path of file 
             string codingSchemePath = filePath;
             
-            // Remove the existing extension of input file and change into .bin
+            // Remove the existing extension of input file and change it intp _codingScheme.txt
             int index = codingSchemePath.IndexOf(".");
             if (index > 0)
             {
