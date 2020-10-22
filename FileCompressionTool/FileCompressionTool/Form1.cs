@@ -205,6 +205,8 @@ namespace FileCompressionTool
                 string filePath = openFileDialog1.FileName;
                 string binPath = filePath;
                 string ExtractPath = filePath;
+                
+                // change the extension of file to _extracted.pdf
                 int index = ExtractPath.IndexOf(".");
                 if (index > 0)
                 {
