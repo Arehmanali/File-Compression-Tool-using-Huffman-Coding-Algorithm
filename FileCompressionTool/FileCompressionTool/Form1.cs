@@ -187,6 +187,7 @@ namespace FileCompressionTool
             openFileDialog1.Title = "Browse File";
             openFileDialog1.FileName = " ";
             openFileDialog1.DefaultExt = "bin";
+            // brows only for the files that have .bin extension
             openFileDialog1.Filter = "Only Binary File (*.bin*)|*.bin*";
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
             {
