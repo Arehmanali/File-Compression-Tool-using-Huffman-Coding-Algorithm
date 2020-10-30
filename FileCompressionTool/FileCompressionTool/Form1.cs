@@ -241,7 +241,7 @@ namespace FileCompressionTool
                 string binPath = filePath;
                 string ExtractPath = filePath;
                 int index = ExtractPath.IndexOf(".");
-                // change the extension
+                // change the extension to _extracted.docx
                 if (index > 0)
                 {
                     ExtractPath = ExtractPath.Substring(0, index);
