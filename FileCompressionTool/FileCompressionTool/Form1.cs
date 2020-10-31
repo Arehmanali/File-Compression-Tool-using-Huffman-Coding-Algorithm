@@ -272,7 +272,7 @@ namespace FileCompressionTool
 
         private void button7_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = "C:";
+            openFileDialog1.InitialDirectory = "C:";        // open the C drive as default directory for open dialoge box
             openFileDialog1.Title = "Browse File";
             openFileDialog1.FileName = " ";
             openFileDialog1.DefaultExt = "bin";
