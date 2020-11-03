@@ -70,7 +70,7 @@ namespace FileCompressionTool
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog2.InitialDirectory = "C:";    // open the C drive as default
+            openFileDialog2.InitialDirectory = "C:";    // open the C drive as default directory in open dialog box
             openFileDialog2.Title = "Open File";
             openFileDialog2.FileName = " ";
             openFileDialog2.Filter = "All Files (*.*)|*.*";
