@@ -202,7 +202,7 @@ namespace FileCompressionTool
         private void button4_Click(object sender, EventArgs e)
         {
            
-                string filePath = openFileDialog1.FileName;
+                string filePath = openFileDialog1.FileName;         // save the path of file opened in string variable
                 string binPath = filePath;
                 string ExtractPath = filePath;
                 
