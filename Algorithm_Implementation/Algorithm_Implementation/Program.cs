@@ -37,7 +37,7 @@ namespace Algorithm_Implementation
             //Read the text file in string variable
             string inputFile = File.ReadAllText(textFile);
 
-            HuffmanTree huffmanTree = new HuffmanTree();
+            HuffmanTree huffmanTree = new HuffmanTree();        // build new Huffman Tree
 
             Console.WriteLine("Text File Read Successfully\n");
 
