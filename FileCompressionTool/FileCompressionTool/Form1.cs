@@ -23,7 +23,7 @@ namespace FileCompressionTool
         private void button5_Click(object sender, EventArgs e)
         {
             string filePath = openFileDialog2.FileName;         // save the path of file from open dialogue box into string variable
-            string binPath = filePath; path of file 
+            string binPath = filePath;                          // set the path for .bin file
             string codingSchemePath = filePath;
             
             // Remove the existing extension of input file and change it intp _codingScheme.txt
