@@ -32,7 +32,7 @@ namespace FileCompressionTool
             {
                 codingSchemePath = codingSchemePath.Substring(0, index);
             }
-            codingSchemePath = codingSchemePath + "_codingScheme.txt";
+            codingSchemePath = codingSchemePath + "_codingScheme.txt";      // concate the string
 
             index = binPath.IndexOf(".");
             if (index > 0)
