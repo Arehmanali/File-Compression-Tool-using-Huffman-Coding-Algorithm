@@ -39,7 +39,7 @@ namespace FileCompressionTool
             {
                 binPath = binPath.Substring(0, index);
             }
-            binPath = binPath + ".bin";
+            binPath = binPath + ".bin";         // concate the string with .bin
             textBox1.Text = filePath;
             textBox2.Text = binPath;
             
