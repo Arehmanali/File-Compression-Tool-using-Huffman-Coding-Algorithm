@@ -113,7 +113,7 @@ namespace FileCompressionTool
                 {
                     ExtractPath = ExtractPath.Substring(0, index);
                 }
-                ExtractPath = ExtractPath + "_extracted.txt";
+                ExtractPath = ExtractPath + "_extracted.txt";       // concatination of string
                 textBox4.Text = ExtractPath;
                 textBox3.Text = filePath;
                 Program.ExtractTextFile(binPath, ExtractPath);
