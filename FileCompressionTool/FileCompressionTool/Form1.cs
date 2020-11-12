@@ -212,7 +212,7 @@ namespace FileCompressionTool
                 {
                     ExtractPath = ExtractPath.Substring(0, index);
                 }
-                ExtractPath = ExtractPath + "_extracted.pdf";
+                ExtractPath = ExtractPath + "_extracted.pdf";           // concatenation string
                 textBox5.Text = ExtractPath;
                 textBox6.Text = filePath;
                 Program.ExtractPdfFile(binPath, ExtractPath);
