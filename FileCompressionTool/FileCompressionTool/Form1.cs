@@ -246,7 +246,7 @@ namespace FileCompressionTool
                 {
                     ExtractPath = ExtractPath.Substring(0, index);
                 }
-                ExtractPath = ExtractPath + "_extracted.docx";
+                ExtractPath = ExtractPath + "_extracted.docx";      // concatination of string
                 textBox8.Text = ExtractPath;
                 textBox7.Text = filePath;
                 Program.ExtractDocxFile(binPath, ExtractPath);
