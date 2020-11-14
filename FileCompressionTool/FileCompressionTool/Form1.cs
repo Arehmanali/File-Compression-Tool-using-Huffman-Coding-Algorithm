@@ -103,7 +103,7 @@ namespace FileCompressionTool
         {
 
             
-                string filePath = openFileDialog1.FileName;
+                string filePath = openFileDialog1.FileName;         // get the file path in filePath variable from open dialog box
                 string binPath = filePath;
                 string ExtractPath = filePath;
                 
