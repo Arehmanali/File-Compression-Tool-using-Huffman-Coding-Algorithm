@@ -237,7 +237,7 @@ namespace FileCompressionTool
         private void button6_Click(object sender, EventArgs e)
         {
            
-                string filePath = openFileDialog1.FileName;
+                string filePath = openFileDialog1.FileName;          // get the file path in filePath variable from open dialog box
                 string binPath = filePath;
                 string ExtractPath = filePath;
                 int index = ExtractPath.IndexOf(".");           // save the index of "."
