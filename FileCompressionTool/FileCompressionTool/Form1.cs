@@ -41,7 +41,7 @@ namespace FileCompressionTool
             }
             binPath = binPath + ".bin";         // concate the string with .bin
             textBox1.Text = filePath;
-            textBox2.Text = binPath;
+            textBox2.Text = binPath;            // new path
             
             // Get the extension of input file
             string extension = Path.GetExtension(filePath);
