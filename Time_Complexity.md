@@ -29,4 +29,4 @@ for i = 1 to n 								                        	O(n)
 </pre>
 
 
-Although linear-time given sorted input, in general cases of arbitrary input, using this algorithm requires pre-sorting. Thus, since sorting takes O(nlogn) time in general cases, both methods have same complexity. Since n here is the number of symbols in the alphabet, which is typically very small number (compared to the length of the message to be encoded), time complexity is not very important in the choice of this algorithm.
+Although linear-time given sortinput, in general cases of arbitrary input, using this algorithm requires pre-sorting. Thus, since sorting takes O(nlogn) time in general cases, both methods have same complexity. Since n here is the number of symbols in the alphabet, which is typically very small number (compared to the length of the message to be encoded), time complexity is not very important in the choice of this algorithm.
